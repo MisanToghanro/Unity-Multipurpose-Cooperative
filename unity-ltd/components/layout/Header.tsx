@@ -1,37 +1,135 @@
 import Link from "next/link";
+import Image from "next/image";
+import { Menu, X, MapPin, Phone } from "lucide-react";
+import { navigationLinks } from "@/data/navigation";
+import { useState } from "react";
+import { AnimatePresence, motion } from "motion/react";
+
+
 
 export default function Header() {
+
+  const [openMenu, setOpenMenu] = useState(false);
+
   return (
-    <header className="sticky top-0 z-50 border-b border-gray-200 bg-white">
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
-        <Link
-          href="/"
-          className="text-2xl font-bold text-green-700"
-        >
-          Unity Cooperative
-        </Link>
+    <motion.header
+    initial={{y:-40, opacity:0}}
+    animate ={{y:0, opacity:1}}
+    transition={{
+      duration:0.5,
+      ease:"easeInOut"
+    }}
+     className="sticky top-0 z-50 border-b border-slate-200 bg-white">
+      <div className=" mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
 
-        <nav>
-          <ul className="hidden gap-8 font-medium md:flex">
-            <li><Link href="/">Home</Link></li>
-            <li><Link href="/about">About</Link></li>
-            <li><Link href="/services">Services</Link></li>
-            <li><Link href="/membership">Membership</Link></li>
-            <li><Link href="/properties">Properties</Link></li>
-            <li><Link href="/contact">Contact</Link></li>
-          </ul>
-        </nav>
+        {/* Left */}
+        <div className="flex flex-col  w-130 gap-6">
 
-        <div className="flex items-center gap-3">
-          <button className="rounded-lg border border-green-700 px-5 py-2 text-green-700 transition hover:bg-green-50">
-            Login
-          </button>
+          <Link href="/" className="flex items-center  gap-2">
 
-          <button className="rounded-lg bg-green-700 px-5 py-2 text-white transition hover:bg-green-800">
-            Become a Member
-          </button>
+            {/* logo */}
+            <Image
+              src="/images/unitylogo.png"
+              alt="Unity Cooperative"
+              width={55}
+              height={55}
+            />
+
+            <div className="space-y-1">
+              <h1 className="text-xl font-bold text-slate-900">
+                Unity Cooperative
+              </h1>
+
+              <p className="text-xs md:text-sm text-slate-500 ">
+                Making Property Ownership Possible Together
+              </p>
+            </div>
+
+          </Link>
+
+          <nav className="hidden lg:block">
+            <ul className="flex items-center gap-10">
+
+              {navigationLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="font-medium text-slate-700 transition hover:text-blue-700"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+
+            </ul>
+          </nav>
+
+        </div>
+
+        {/* Right */}
+
+        <div className="space-y-4 text-right hidden lg:flex flex-col">
+
+          <div className="flex items-center justify-end gap-2 text-slate-600">
+            <MapPin size={18} />
+            <span>Warri, Delta State</span>
+          </div>
+
+          <div className="flex items-center justify-end gap-2 text-slate-600">
+            <Phone size={18} />
+            <span>+234 XXX XXX XXXX</span>
+          </div>
+
+        </div>
+        
+      <button onClick={() => setOpenMenu(!openMenu)} className="lg:hidden">
+
+        {openMenu ? <X size={28}/> : <Menu size={28}/>}
+          
+      </button>
+
+      </div>
+<AnimatePresence>
+        {openMenu && (
+  <motion.div
+  initial={{opacity:0 , height:0}}
+  animate={{opacity:1, height:"auto"}}
+  exit={{opacity: 0, height: 0,}}
+   className="border-t bg-white lg:hidden">
+    <nav className="py-6">
+      <ul className="flex flex-col gap-5 px-6">
+        {navigationLinks.map((link) => (
+          <li key={link.name}>
+            <Link
+              href={link.href}
+              onClick={() => setOpenMenu(false)}
+              className="text-lg font-medium"
+            >
+              {link.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
+
+      <div className="mt-8 border-t px-6 pt-6">
+        <div className="mb-3 flex items-center gap-2">
+          <MapPin size={18} />
+          <span>Warri, Delta State</span>
+        </div>
+
+        <div className="flex items-center gap-2">
+          <Phone size={18} />
+          <span>+234 XXX XXX XXXX</span>
         </div>
       </div>
-    </header>
+    </nav>
+  </motion.div>
+)}
+
+</AnimatePresence>
+
+
+       
+    </motion.header>
   );
 }
