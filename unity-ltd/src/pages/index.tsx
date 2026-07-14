@@ -1,13 +1,13 @@
 
-
+import Hero from "../../components/sections/Hero";
 
 
 
 const Home = () => {
 
   return(
-    <main className="min-w-screen">
-      <h1>Unity Multipurpose Cooperative Society Ltd</h1>
+    <main >
+      <Hero/>
     </main>
   )
 }
