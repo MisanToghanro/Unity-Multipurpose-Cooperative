@@ -19,11 +19,11 @@ export default function Header() {
       duration:0.5,
       ease:"easeInOut"
     }}
-     className="sticky top-0 z-50 border-b border-slate-200 bg-white">
+    className="sticky top-0 z-50 border-b border-slate-200/70 bg-white/90 backdrop-blur-lg">
       <div className=" mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
 
         {/* Left */}
-        <div className="flex flex-col  w-130 gap-6">
+        <div className="flex flex-col  gap-6">
 
           <Link href="/" className="flex items-center  gap-2">
 
@@ -54,7 +54,7 @@ export default function Header() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="font-medium text-slate-700 transition hover:text-blue-700"
+                    className="font-medium text-slate-700 transition hover:text-[#7AC943]"
                   >
                     {link.name}
                   </Link>
@@ -70,14 +70,21 @@ export default function Header() {
 
         <div className="space-y-4 text-right hidden lg:flex flex-col">
 
-          <div className="flex items-center justify-end gap-2 text-slate-600">
+          <div className="flex items-start text-right justify-end gap-2 text-slate-600">
             <MapPin size={18} />
-            <span>Warri, Delta State</span>
+             <span className="max-w-57.5 leading-6">
+  4 Refinery Road,
+  Iye Plaza,
+  Warri, Delta State
+</span>
           </div>
 
           <div className="flex items-center justify-end gap-2 text-slate-600">
             <Phone size={18} />
-            <span>+234 XXX XXX XXXX</span>
+            <Link href="tel:+2347089286918"
+            className="transition-colors hover:text-[#7AC943]">
+              +234 708 928 6918
+            </Link>
           </div>
 
         </div>
@@ -114,12 +121,12 @@ export default function Header() {
       <div className="mt-8 border-t px-6 pt-6">
         <div className="mb-3 flex items-center gap-2">
           <MapPin size={18} />
-          <span>Warri, Delta State</span>
+          <span> 4 Refinery Road Iye Plaza Warri Delta State</span>
         </div>
 
         <div className="flex items-center gap-2">
           <Phone size={18} />
-          <span>+234 XXX XXX XXXX</span>
+          <span>+234 708 928 6918</span>
         </div>
       </div>
     </nav>

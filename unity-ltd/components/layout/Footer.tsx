@@ -25,9 +25,9 @@ export default function Footer() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.4 }}
           className="max-w-4xl text-5xl font-bold uppercase leading-tight text-white md:text-7xl">
-            ready to
+            Ready to Build
             <br />
-            own land?
+             Financial Future?
           </motion.h2>
 
           <motion.p 
@@ -36,9 +36,10 @@ export default function Footer() {
           whileInView="visible"
           viewport={{ once: true}}
           className="mt-8 max-w-2xl text-lg leading-8 text-slate-400">
-            Join a trusted cooperative helping members build wealth through
-            secure land ownership, cooperative savings and real estate
-            investment.
+            Join a trusted member-owned cooperative committed to helping
+individuals, families and businesses grow through disciplined
+savings, affordable financing, strategic investments and
+property ownership.
           </motion.p>
 
           <motion.button
@@ -88,8 +89,10 @@ export default function Footer() {
           </h3>
 
           <p className="leading-8 text-slate-400">
-            Building wealth together through secure land ownership,
-            property investment and transparent cooperative financing.
+              Empowering members through disciplined savings,
+  affordable financing, property ownership and
+  sustainable investment opportunities that create
+  lasting wealth.
           </p>
 
         </motion.div>
@@ -123,14 +126,45 @@ export default function Footer() {
               Services
             </h4>
 
-            <ul className="space-y-3">
+             <ul className="space-y-3">
 
-              <li>Land Purchase</li>
-              <li>Property Financing</li>
-              <li>Housing Development</li>
-              <li>Investment Scheme</li>
+  <li>
+    <Link href="/services">
+      Savings Plans
+    </Link>
+  </li>
 
-            </ul>
+  <li>
+    <Link href="/services">
+      Property Acquisition
+    </Link>
+  </li>
+
+  <li>
+    <Link href="/services">
+      Cooperative Loans
+    </Link>
+  </li>
+
+  <li>
+    <Link href="/services">
+      Housing Development
+    </Link>
+  </li>
+
+  <li>
+    <Link href="/services">
+      Investment Opportunities
+    </Link>
+  </li>
+
+  <li>
+    <Link href="/services">
+      Property Documentation
+    </Link>
+  </li>
+
+</ul>
 
           </div>
 
@@ -148,17 +182,22 @@ export default function Footer() {
 
             <div className="flex items-center gap-3">
               <MapPin size={18} />
-              <span>Warri, Delta State</span>
+              <span>4 Refinery Road Iye Plaza Warri Delta State</span>
             </div>
 
             <div className="flex items-center gap-3">
               <Phone size={18} />
-              <span>+234 XXX XXX XXXX</span>
+              <Link
+  href="tel:+2347089286918"
+  className="transition-colors hover:text-[#7AC943]"
+>
+  +234 708 928 6918
+</Link>
             </div>
 
             <div className="flex items-center gap-3">
               <Mail size={18} />
-              <span>info@unitycoop.ng</span>
+              <span>unitympcsltd@gmail.com</span>
             </div>
 
           </div>

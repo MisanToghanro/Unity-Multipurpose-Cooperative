@@ -1,123 +1,122 @@
 import { HeroSlide } from "../../components/layout/interfaces";
 
 export const heroSlides: HeroSlide[] = [
-  {
-    id: 1,
-    title: [
-      "Own Land.",
-      "Build Wealth.",
-      "Together.",
-    ],
+{
+  id: 1,
 
-    description:
-      "Unity Multipurpose Cooperative Society helps individuals, families and businesses achieve property ownership through affordable savings, verified land acquisition and cooperative investment opportunities.",
+  title: [
+    "Save Together.",
+    "Invest Wisely.",
+    "Build Lasting Wealth.",
+  ],
 
-    image: "/images/heroimg1.jpeg",
+  description:
+    "Unity Multipurpose Cooperative Society empowers individuals, families and businesses through disciplined savings, affordable financing, property ownership and investment opportunities designed for long-term financial growth.",
 
-    primaryBtn: {
-      text: "Become a Member",
-      href: "/membership",
-    },
+  image: "/images/heroimg1.jpeg",
 
-    secondaryBtn: {
-      text: "Explore Properties",
-      href: "/properties",
-    },
-
-    highlights: [
-      "Registered Cooperative",
-      "Verified Land Titles",
-      "Flexible Payment Plans",
-    ],
+  primaryBtn: {
+    text: "Become a Member",
+    href: "/membership",
   },
 
-  {
-    id: 2,
-
-    title: [
-      "Verified Land.",
-      "Secure Investments.",
-    ],
-
-    description:
-      "Purchase verified plots through flexible installment plans backed by transparency, proper documentation and trusted partnerships.",
-
-    image: "/images/heroimg2.jpeg",
-
-    primaryBtn: {
-      text: "View Properties",
-      href: "/properties",
-    },
-
-    secondaryBtn: {
-      text: "Learn More",
-      href: "/services",
-    },
-
-    highlights: [
-      "Government Verified Lands",
-      "Secure Documentation",
-      "Trusted Property Partners",
-    ],
+  secondaryBtn: {
+    text: "Learn About Us",
+    href: "/about",
   },
 
-  {
-    id: 3,
+  highlights: [
+    "Registered Cooperative Society",
+    "Transparent Governance",
+    "Member-Owned & Member-Focused",
+  ],
+},
 
-    title: [
-      "Save Today.",
-      "Own Tomorrow.",
-    ],
+{
+  id: 2,
 
-    description:
-      "Our structured savings plans help members build financial discipline while preparing for land acquisition, housing and long-term investments.",
+  title: [
+    "Own Property.",
+    "Secure Your Future.",
+  ],
 
-    image: "/images/heroimg3.jpeg",
+  description:
+    "Access verified land, housing opportunities and flexible property financing through trusted partnerships that make ownership more accessible and secure.",
 
-    primaryBtn: {
-      text: "Join Membership",
-      href: "/membership",
-    },
+  image: "/images/heroimg2.jpeg",
 
-    secondaryBtn: {
-      text: "Savings Plans",
-      href: "/services",
-    },
-
-    highlights: [
-      "Monthly Savings Plans",
-      "Affordable Installments",
-      "Financial Discipline",
-    ],
+  primaryBtn: {
+    text: "Explore Properties",
+    href: "/properties",
   },
 
-  {
-    id: 4,
-
-    title: [
-      "Invest With",
-      "Confidence.",
-    ],
-
-    description:
-      "From land ownership to housing development and real estate investment, we're committed to helping members create lasting wealth.",
-
-    image: "/images/heroimg4.jpeg",
-
-    primaryBtn: {
-      text: "Start Investing",
-      href: "/contact",
-    },
-
-    secondaryBtn: {
-      text: "Contact Us",
-      href: "/contact",
-    },
-
-    highlights: [
-      "Real Estate Investments",
-      "Housing Development",
-      "Long-Term Wealth Creation",
-    ],
+  secondaryBtn: {
+    text: "Our Services",
+    href: "/services",
   },
+
+  highlights: [
+    "Verified Property Listings",
+    "Secure Documentation",
+    "Flexible Payment Plans",
+  ],
+},
+{
+  id: 3,
+
+  title: [
+    "Save Today.",
+    "Grow Tomorrow.",
+  ],
+
+  description:
+    "Build financial discipline through structured savings plans while gaining access to cooperative loans, investment opportunities and future wealth creation.",
+
+  image: "/images/heroimg3.jpeg",
+
+  primaryBtn: {
+    text: "Join Membership",
+    href: "/membership",
+  },
+
+  secondaryBtn: {
+    text: "View Services",
+    href: "/services",
+  },
+
+  highlights: [
+    "Flexible Savings Plans",
+    "Affordable Cooperative Loans",
+    "Financial Growth Opportunities",
+  ],
+},
+{
+  id: 4,
+
+  title: [
+    "Invest With",
+    "Confidence.",
+  ],
+
+  description:
+    "From real estate and agricultural investments to business support and wealth creation, we provide members with opportunities to build lasting financial security.",
+
+  image: "/images/heroimg4.jpeg",
+
+  primaryBtn: {
+    text: "Explore Opportunities",
+    href: "/services",
+  },
+
+  secondaryBtn: {
+    text: "Contact Us",
+    href: "/contact",
+  },
+
+  highlights: [
+    "Property Investments",
+    "Agricultural Opportunities",
+    "Business & Wealth Support",
+  ],
+}
 ];

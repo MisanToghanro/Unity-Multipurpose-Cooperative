@@ -1,4 +1,4 @@
-"use client";
+
 
 import { useState } from "react";
 import Image from "next/image";
@@ -75,7 +75,7 @@ export default function Hero() {
             {/* Heading */}
             <motion.h1
               variants={fadeUp}
-              className="text-5xl font-bold leading-tight text-white sm:text-6xl md:text-7xl xl:text-8xl"
+              className="text-4xl font-bold leading-tight text-white sm:text-6xl md:text-6xl xl:text-7xl"
             >
               {slide.title.map((line) => (
                 <span key={line} className="block">

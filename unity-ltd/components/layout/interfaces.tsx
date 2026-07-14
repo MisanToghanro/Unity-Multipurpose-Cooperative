@@ -16,3 +16,24 @@ export interface HeroSlide {
 
   highlights: string[];
 }
+
+export interface SectionHeadingProps {
+  eyebrow: string;
+  title: string;
+  description: string;
+  center?: boolean;
+}
+
+
+export interface ButtonProps {
+  href: string;
+  children: React.ReactNode;
+  variant?: "primary" | "outline";
+}
+
+export interface CardProps {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+   href?: string;
+}
