@@ -14,7 +14,7 @@ import { fadeRight } from "../animations/variants";
 
 export default function About() {
   return (
-    <section className="bg-white py-24">
+    <section className="bg-[#e6f5dd] py-24">
       <div className="mx-auto max-w-7xl px-6">
 
         {/* Top Content */}

@@ -43,3 +43,21 @@ export interface ServiceCardProps {
   description: string;
   href: string;
 }
+
+export interface Property {
+  id: number;
+  title: string;
+  location: string;
+  image: string;
+
+  type: string;
+
+  verified: boolean;
+  installment: boolean;
+
+  status: "coming-soon" | "available";
+
+  price?: string;
+
+  href: string;
+}

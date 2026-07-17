@@ -14,58 +14,6 @@ export default function Footer() {
   return (
     <footer className="bg-slate-950 text-slate-300">
 
-      {/* CTA */}
-
-      <section className="border-b border-slate-800">
-        <div className="mx-auto flex max-w-7xl flex-col items-center px-6 py-24 text-center">
-
-          <motion.h2 
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.4 }}
-          className="max-w-4xl text-5xl font-bold uppercase leading-tight text-white md:text-7xl">
-            Ready to Build
-            <br />
-             Financial Future?
-          </motion.h2>
-
-          <motion.p 
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true}}
-          className="mt-8 max-w-2xl text-lg leading-8 text-slate-400">
-            Join a trusted member-owned cooperative committed to helping
-individuals, families and businesses grow through disciplined
-savings, affordable financing, strategic investments and
-property ownership.
-          </motion.p>
-
-          <motion.button
-          variants={fadeLeft}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{once:true ,  amount: 0.5}}
-          >
-           <Link
-            href="/membership"
-            className="group mt-10 inline-flex items-center gap-3 rounded-full bg-[#7AC943] px-8 py-4 font-semibold text-slate-950 transition hover:scale-105"
-          >
-            Become a Member
-
-            <ArrowUpRight
-              size={20}
-              className="transition group-hover:translate-x-1 group-hover:-translate-y-1"
-            />
-          </Link>
-
-          </motion.button>
-
-
-        </div>
-      </section>
-
       {/* Footer Content */}
 
       <motion.section 
@@ -195,10 +143,12 @@ property ownership.
 </Link>
             </div>
 
-            <div className="flex items-center gap-3">
-              <Mail size={18} />
-              <span>unitympcsltd@gmail.com</span>
-            </div>
+           <Link
+  href="mailto:unitympcsltd@gmail.com"
+  className="transition-colors duration-300 hover:text-[#7AC943]"
+>
+  unitympcsltd@gmail.com
+</Link>
 
           </div>
 
@@ -208,22 +158,32 @@ property ownership.
 
       {/* Bottom */}
 
-      <section className="border-t border-slate-800">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 py-8 md:flex-row">
+<section className="border-t border-slate-800">
+  <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-8 text-sm text-slate-500 md:flex-row">
 
-          <div className="flex gap-5">
+    <p>
+      © {new Date().getFullYear()} Unity Multipurpose Cooperative Society Limited.
+      All rights reserved.
+    </p>
 
+    <div className="flex items-center gap-6">
+      <Link
+        href="/privacy"
+        className="transition hover:text-[#7AC943]"
+      >
+        Privacy Policy
+      </Link>
 
+      <Link
+        href="/terms"
+        className="transition hover:text-[#7AC943]"
+      >
+        Terms & Conditions
+      </Link>
+    </div>
 
-          </div>
-
-          <p className="text-sm text-slate-500">
-            © {new Date().getFullYear()} Unity Multipurpose Cooperative Society Limited.
-            All Rights Reserved.
-          </p>
-
-        </div>
-      </section>
+  </div>
+</section>
 
     </footer>
   );
