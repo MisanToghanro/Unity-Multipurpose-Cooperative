@@ -1,7 +1,7 @@
 
 import Hero from "../../components/sections/Hero";
 import About from "../../components/sections/About";
-
+import Services from "../../components/sections/Services";
 
 const Home = () => {
 
@@ -9,6 +9,7 @@ const Home = () => {
     <main >
       <Hero/>
       <About/>
+      <Services/>
     </main>
   )
 }

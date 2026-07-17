@@ -32,8 +32,14 @@ export interface ButtonProps {
 }
 
 export interface CardProps {
-  icon: React.ReactNode;
+  icon?: React.ReactNode
   title: string;
   description: string;
-   href?: string;
+}
+
+export interface ServiceCardProps {
+  icon: React.ElementType;
+  title: string;
+  description: string;
+  href: string;
 }
